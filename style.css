@@ -877,10 +877,8 @@ nav {
 .project-card:hover img,
 
 .project-card:hover video {
-
     transform:
         scale(1.08);
-
 }
 
 
@@ -1725,4 +1723,35 @@ footer span {
     }
 
 
+}
+/* =========================
+   TRAVELING CONTENT (RASIO VIDEO)
+========================= */
+
+/* Grid 2 kolom supaya kartu rasio lebar tidak terlalu kecil */
+.travel-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Kartu mengikuti rasio, bukan tinggi tetap */
+.project-card.ratio-16-9 {
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+.project-card.ratio-4-3 {
+    height: auto;
+    aspect-ratio: 4 / 3;
+}
+
+.project-card.ratio-9-16 {
+    height: auto;
+    aspect-ratio: 9 / 16;
+}
+
+/* HP: 1 kolom */
+@media (max-width: 768px) {
+    .travel-grid {
+        grid-template-columns: 1fr;
+    }
 }
